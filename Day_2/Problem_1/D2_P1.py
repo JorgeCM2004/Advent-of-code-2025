@@ -24,6 +24,5 @@ def main():
 		counter += sum(invalids)
 	print(counter)
 
-
 if __name__ == "__main__":
 	main()

@@ -1,6 +1,5 @@
 from pathlib import Path
 
-
 def main():
 	counter = 0
 	with open(Path(__file__).parent.parent / "input.txt", "r") as file:
@@ -23,7 +22,6 @@ def main():
 			counter += int(str(first_digit) + str(last_digit))
 
 	print(counter)
-
 
 if __name__ == "__main__":
 	main()
