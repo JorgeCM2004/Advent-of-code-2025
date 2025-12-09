@@ -12,16 +12,18 @@ def main():
 				continue
 			else:
 				to_remove = []
+				new_beams = []
 				for beam in beams:
 					if line[beam] == "^":
-						counter += 1
 						to_remove.append(beam)
-						if beam - 1 not in beams:
-							beams.append(beam - 1)
-						if beam + 1 not in beams:
-							beams.append(beam + 1)
+						new_beams.append(beam - 1)
+						new_beams.append(beam + 1)
+						counter += 1
 				for beam in to_remove:
 					beams.remove(beam)
+				for beam in new_beams:
+					if beam not in beams:
+						beams.append(beam)
 	print(counter)
 
 if __name__ == "__main__":
